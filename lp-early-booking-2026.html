@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Early Booking 2026 — 15% OFF | Pousada Alto de Monte Verde</title>
+<meta name="description" content="Reserve em agosto ou setembro de 2026 para qualquer estadia entre agosto e novembro e ganhe 15% de desconto. Chalés com lareira e hidromassagem a 1.750m de altitude em Monte Verde.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+@font-face{
+  font-family:'Romansa';
+  src:url('eb/romansa.otf') format('opentype');
+  font-weight:normal;
+  font-display:swap;
+}
+:root{
+  --verde:#364230;
+  --verde-escuro:#485342;
+  --caramelo:#C98939;
+  --creme:#DDD9CD;
+  --branco:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--creme);color:var(--verde);line-height:1.6}
+
+/* ===== BARRA STICKY ===== */
+.sticky-bar{position:sticky;top:0;z-index:50;background:var(--verde);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 24px;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.sticky-bar .logo{height:42px;width:auto}
+.sticky-bar .btn-caramelo{padding:11px 24px;font-size:.82rem}
+@media(max-width:600px){.sticky-bar{padding:8px 16px}.sticky-bar .logo{height:32px}.sticky-bar .btn-caramelo{padding:9px 16px;font-size:.72rem}}
+
+/* ===== WHATSAPP FLUTUANTE ===== */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;background:#25D366;color:#fff;display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:100px;text-decoration:none;font-weight:600;font-size:.9rem;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .2s ease}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float svg{width:22px;height:22px;fill:#fff}
+@media(max-width:600px){.wa-float span{display:none}.wa-float{padding:14px;border-radius:50%}}
+h1,h2,h3{font-family:'Romansa','Cormorant Garamond',serif;font-weight:normal;line-height:1.15}
+img{max-width:100%;display:block}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.tag{display:inline-block;background:var(--caramelo);color:var(--branco);font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:7px 18px;border-radius:100px}
+.btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-align:center;border:none;border-radius:8px;cursor:pointer;transition:all .25s ease}
+.btn-caramelo{background:var(--caramelo);color:var(--branco);padding:16px 36px;font-size:.95rem}
+.btn-caramelo:hover{background:var(--verde-escuro)}
+.btn-verde{background:var(--verde);color:var(--branco);padding:16px 36px;font-size:.95rem}
+.btn-verde:hover{background:var(--caramelo)}
+.btn-outline{background:transparent;color:var(--caramelo);border:1.5px solid var(--caramelo);padding:11px 26px;font-size:.82rem}
+.btn-outline:hover{background:var(--caramelo);color:var(--branco)}
+
+/* Placeholder de imagem — substituir pelas fotos reais */
+.img-placeholder{background:linear-gradient(135deg,#485342 0%,#364230 60%,#2b3527 100%);color:rgba(255,255,255,.75);display:flex;align-items:center;justify-content:center;text-align:center;font-size:.85rem;letter-spacing:.05em;padding:20px;border-radius:12px}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(100deg,rgba(43,53,39,.72) 0%,rgba(43,53,39,.45) 55%,rgba(43,53,39,.25) 100%),url('eb/banner-web.jpg') center/cover no-repeat;color:var(--branco);padding:72px 0 80px;position:relative}
+.hero h1,.hero p.sub,.countdown-label{text-shadow:0 1px 12px rgba(0,0,0,.35)}
+.hero-kv{height:130px;width:auto;max-width:100%;margin-bottom:12px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:3.1rem;color:var(--branco);margin:20px 0 14px}
+.hero .prova-hero{font-size:.95rem;font-weight:500;color:rgba(255,255,255,.92);margin-bottom:14px}
+.hero .prova-hero .star{color:var(--caramelo)}
+.hero p.sub{font-size:1.12rem;font-weight:300;color:rgba(255,255,255,.88);max-width:520px}
+
+/* Contador */
+.countdown-wrap{margin-top:30px}
+.countdown-label{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:10px}
+.countdown{display:flex;gap:14px}
+.countdown .unit{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 18px;min-width:86px;text-align:center}
+.countdown .num{font-size:2rem;font-weight:700;color:var(--caramelo);line-height:1}
+.countdown .lbl{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:6px}
+
+/* Formulário */
+.form-card{background:var(--branco);color:var(--verde);border-radius:16px;padding:36px 32px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.form-card h3{font-size:1.7rem;margin-bottom:6px}
+.form-card p{font-size:.95rem;color:#6b705f;margin-bottom:22px}
+.form-card label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.form-card input{width:100%;padding:13px 14px;margin-bottom:16px;border:1.5px solid #cfcabb;border-radius:8px;font-family:'Jost',sans-serif;font-size:1rem;background:#faf9f6}
+.form-card input:focus{outline:none;border-color:var(--caramelo)}
+.captcha-placeholder{border:1.5px dashed #cfcabb;border-radius:8px;padding:18px;text-align:center;font-size:.85rem;color:#8a8a7a;margin-bottom:18px}
+.form-card .btn{width:100%}
+.form-note{font-size:.75rem;color:#9a9a8a;text-align:center;margin-top:12px}
+
+/* ===== DIFERENCIAIS ===== */
+.diferenciais{padding:80px 0}
+.dif-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.diferenciais h2{font-size:2.5rem;margin-bottom:20px}
+.diferenciais .apoio{margin:0 0 32px;font-size:1.05rem;font-weight:300}
+.icons-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px;margin-bottom:36px}
+.icon-item{display:flex;align-items:center;gap:14px}
+.icon-badge{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:rgba(201,137,57,.15);display:flex;align-items:center;justify-content:center}
+.icon-badge svg{width:22px;height:22px;stroke:var(--verde)}
+.icon-item span{font-size:.95rem;font-weight:600;line-height:1.25}
+.dif-img{width:100%;height:340px;object-fit:cover;border-radius:12px}
+
+/* ===== CHALÉS ===== */
+.chales{padding:80px 0;background:var(--branco)}
+.chales h2{font-size:2.4rem;text-align:center}
+.chales .sub{text-align:center;max-width:620px;margin:12px auto 52px;font-weight:300;font-size:1.08rem}
+.chales-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.chale-card{background:var(--creme);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.chale-card img{height:220px;width:100%;object-fit:cover}
+.chale-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.chale-cat{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--caramelo)}
+.chale-body h3{font-size:1.6rem;margin:6px 0 10px}
+.chale-body p{font-size:.95rem;font-weight:300;flex:1;margin-bottom:20px}
+.chales-cta{text-align:center;margin-top:52px}
+
+/* ===== PROVA SOCIAL ===== */
+.prova{padding:80px 0;text-align:center}
+.badge-avaliacoes{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;background:var(--branco);border-radius:100px;padding:16px 36px;font-size:.95rem;font-weight:500;margin-bottom:52px;box-shadow:0 8px 24px rgba(54,66,48,.08)}
+.badge-avaliacoes .star{color:var(--caramelo)}
+.depoimentos{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;text-align:left}
+.depo-card{background:var(--branco);border-radius:14px;padding:32px 28px;box-shadow:0 8px 24px rgba(54,66,48,.06)}
+.depo-card .stars{color:var(--caramelo);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.depo-card p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;margin-bottom:18px}
+.depo-card .autor{font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.depo-card .fonte{font-size:.78rem;color:#8a8a7a}
+
+/* ===== MONTE VERDE ===== */
+.destino{padding:80px 0;background:var(--branco)}
+.destino-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.destino img{height:340px;width:100%;object-fit:cover;border-radius:12px}
+.destino h2{font-size:2.3rem;margin-bottom:18px}
+.destino p{font-size:1.08rem;font-weight:300;margin-bottom:16px}
+.destino .btn{margin-top:8px}
+
+/* ===== CTA FINAL ===== */
+.cta-final{background:var(--verde);color:var(--branco);padding:80px 0;text-align:center}
+.cta-final h2{font-size:2.6rem;color:var(--branco);margin-bottom:14px}
+.cta-final .sub{font-size:1.1rem;font-weight:300;color:rgba(255,255,255,.85);max-width:660px;margin:0 auto 18px}
+.cta-final .urgencia{font-size:.95rem;font-weight:500;color:var(--caramelo);margin:0 auto 22px}
+.selos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;font-size:.92rem;color:var(--branco);margin-bottom:36px}
+.selos .star{color:var(--caramelo)}
+.cta-final .countdown{justify-content:center;margin-bottom:40px}
+.cta-final .btn-caramelo{padding:20px 52px;font-size:1.05rem}
+
+/* ===== FAQ ===== */
+.faq{padding:80px 0;max-width:820px;margin:0 auto}
+.faq h2{font-size:2.4rem;text-align:center;margin-bottom:44px}
+.faq details{background:var(--branco);border-radius:12px;margin-bottom:14px;overflow:hidden}
+.faq summary{padding:20px 26px;font-weight:600;font-size:1.02rem;cursor:pointer;list-style:none;position:relative}
+.faq summary::after{content:"+";position:absolute;right:26px;top:50%;transform:translateY(-50%);font-size:1.4rem;color:var(--caramelo);font-weight:400}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 26px 22px;font-weight:300;font-size:.98rem}
+
+/* ===== FOOTER ===== */
+footer{background:var(--verde-escuro);color:rgba(255,255,255,.8);padding:36px 0;text-align:center;font-size:.85rem}
+footer strong{color:var(--branco)}
+
+@media(max-width:900px){
+  .hero-grid,.destino-grid,.dif-grid{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:2.3rem}
+  .chales-grid,.depoimentos{grid-template-columns:1fr}
+  .dif-collage{height:420px}
+  .countdown .unit{min-width:72px;padding:10px 12px}
+  .countdown .num{font-size:1.5rem}
+}
+@media(max-width:520px){
+  .icons-grid{grid-template-columns:1fr}
+  .dif-collage{height:340px}
+  .hero{padding:40px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== BARRA STICKY (âncora topo) ===== -->
+<div class="sticky-bar">
+  <img src="eb/logocabecalho.png" alt="Pousada Alto de Monte Verde" class="logo">
+  <a href="#formulario" class="btn btn-caramelo">Pegar meu desconto</a>
+</div>
+
+<!-- ===== SEÇÃO 1 — HERO ===== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <img src="eb/kv.png" alt="Early Booking 2026" class="hero-kv">
+      <h1>Seu refúgio nas montanhas,<br>com 15% de desconto.</h1>
+      <p class="prova-hero"><span class="star">★</span> 9,7 no Booking · 4,7 no Google · mais de 500 avaliações</p>
+      <p class="sub">Reserve em agosto ou setembro de 2026 para qualquer estadia entre agosto e novembro, com mínimo de 2 diárias, e garanta 15% de desconto direto no motor de reservas.</p>
+      <div class="countdown-wrap">
+        <div class="countdown-label">Esta oferta encerra em:</div>
+        <div class="countdown" data-countdown>
+          <div class="unit"><div class="num" data-d>--</div><div class="lbl">dias</div></div>
+          <div class="unit"><div class="num" data-h>--</div><div class="lbl">horas</div></div>
+          <div class="unit"><div class="num" data-m>--</div><div class="lbl">min</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="form-card" id="formulario">
+      <h3>Quer resgatar seu cupom?</h3>
+      <p>Preencha seus dados e ganhe 15% de desconto</p>
+      <!-- No RD Station, configure o redirecionamento pós-envio para obrigado.html. Este handler simula o fluxo no protótipo. -->
+      <form onsubmit="event.preventDefault(); window.location.href='obrigado.html';">
+        <label for="nome">Nome completo *</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required>
+        <label for="telefone">Telefone / WhatsApp *</label>
+        <input type="tel" id="telefone" name="telefone" required>
+        <button type="submit" class="btn btn-caramelo">Quero meu desconto de 15%</button>
+      </form>
+      <p class="form-note">Seus dados são protegidos e não serão compartilhados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 2 — DIFERENCIAIS ===== -->
+<section class="diferenciais">
+  <div class="container dif-grid">
+    <div class="dif-left">
+      <h2>Uma estadia que você vai querer repetir</h2>
+      <p class="apoio">No alto de Monte Verde, a 1.750 metros de altitude, a Pousada Alto de Monte Verde oferece chalés privativos com lareira, hidromassagem e vista para a mata nativa. Avaliada com 9,7 no Booking e 4,7 no Google, é o refúgio romântico mais bem avaliado da região.</p>
+      <div class="icons-grid">
+        <div class="icon-item">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></span>
+          <span>Café da manhã artesanal</span>
+        </div>
+        <div class="icon-item">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-2 7-5.5 7-9.5C19 8 16 5 12 2 8 5 5 8 5 12.5c0 4 3 7.5 7 9.5z"/><path d="M12 22c1.5-1 3-2.8 3-5 0-2-1.5-3.5-3-5-1.5 1.5-3 3-3 5 0 2.2 1.5 4 3 5z"/></svg></span>
+          <span>Lareira em todos os chalés</span>
+        </div>
+        <div class="icon-item">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-3z"/><path d="M6 12V5a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2"/><line x1="7" y1="19" x2="7" y2="21"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
+          <span>Hidromassagem dupla (confira opções)</span>
+        </div>
+        <div class="icon-item">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+          <span>Vista para a mata nativa</span>
+        </div>
+        <div class="icon-item">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c1.5-2 2.5-2 4 0s2.5 2 4 0"/><path d="M8 9c1.5-2 2.5-2 4 0s2.5 2 4 0"/><path d="M8 15c1.5-2 2.5-2 4 0s2.5 2 4 0"/></svg></span>
+          <span>Sauna e Spa</span>
+        </div>
+        <div class="icon-item">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12" y2="20"/></svg></span>
+          <span>Wi-Fi e estacionamento gratuitos</span>
+        </div>
+      </div>
+      <a href="#formulario" class="btn btn-verde">Quero reservar com desconto</a>
+    </div>
+    <div>
+      <img class="dif-img" src="eb/apousada-web.jpg" alt="Casal aproveitando o jardim da pousada" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 3 — CHALÉS ===== -->
+<section class="chales">
+  <div class="container">
+    <h2>Escolha seu refúgio</h2>
+    <p class="sub">Cada chalé foi pensado para proporcionar privacidade, conforto e uma conexão real com a natureza.</p>
+    <div class="chales-grid">
+      <div class="chale-card">
+        <img src="eb/margarida-web.jpg" alt="Chalé Margarida" loading="lazy">
+        <div class="chale-body">
+          <h3>Margarida</h3>
+          <p>Lareira, cama king e varanda com rede — aconchego total para curtir a dois.</p>
+          <a href="#formulario" class="btn btn-outline">Ver disponibilidade</a>
+        </div>
+      </div>
+      <div class="chale-card">
+        <img src="eb/azaleia-web.jpg" alt="Chalé Azaléia" loading="lazy">
+        <div class="chale-body">
+          <h3>Azaléia</h3>
+          <p>Hidromassagem dupla, lareira e rede na varanda — o chalé ideal para uma escapada romântica.</p>
+          <a href="#formulario" class="btn btn-outline">Ver disponibilidade</a>
+        </div>
+      </div>
+      <div class="chale-card">
+        <img src="eb/gerano-web.jpg" alt="Chalé Gerânio" loading="lazy">
+        <div class="chale-body">
+          <h3>Gerânio</h3>
+          <p>Hidromassagem dupla sob o céu aberto — teto de vidro, lareira e varanda envidraçada com vista para a mata.</p>
+          <a href="#formulario" class="btn btn-outline">Ver disponibilidade</a>
+        </div>
+      </div>
+      <div class="chale-card">
+        <img src="eb/jasmin-web.jpg" alt="Chalé Jasmin" loading="lazy">
+        <div class="chale-body">
+          <h3>Jasmin</h3>
+          <p>Amplo, aconchegante e com hidromassagem dupla — privacidade e conforto em harmonia perfeita.</p>
+          <a href="#formulario" class="btn btn-outline">Ver disponibilidade</a>
+        </div>
+      </div>
+      <div class="chale-card">
+        <img src="eb/lavanda-web.jpg" alt="Chalé Lavanda" loading="lazy">
+        <div class="chale-body">
+          <h3>Lavanda</h3>
+          <p>Mezanino, hidromassagem dupla e lareira — o chalé com mais espaço e varanda com rede.</p>
+          <a href="#formulario" class="btn btn-outline">Ver disponibilidade</a>
+        </div>
+      </div>
+      <div class="chale-card">
+        <img src="eb/orquidea-web.jpg" alt="Chalé Orquídea" loading="lazy">
+        <div class="chale-body">
+          <h3>Orquídea</h3>
+          <p>O máximo da experiência: hidromassagem com teto de vidro, decoração moderna e a vista mais privilegiada da pousada.</p>
+          <a href="#formulario" class="btn btn-outline">Ver disponibilidade</a>
+        </div>
+      </div>
+    </div>
+    <div class="chales-cta">
+      <a href="#formulario" class="btn btn-caramelo">Ver disponibilidade e reservar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 4 — PROVA SOCIAL ===== -->
+<section class="prova">
+  <div class="container">
+    <div class="badge-avaliacoes">
+      <span><span class="star">★</span> 9,7 no Booking.com</span>
+      <span><span class="star">★</span> 4,7 no Google</span>
+      <span>TripAdvisor Travellers' Choice</span>
+      <span>+500 avaliações</span>
+    </div>
+    <!-- ATENÇÃO: depoimentos representativos — substituir pelos textos reais do Google/Booking antes de publicar -->
+    <div class="depoimentos">
+      <div class="depo-card">
+        <div class="stars">★★★★★</div>
+        <p>"O chalé é impecável, com lareira e hidromassagem maravilhosas. Acordar com a neblina cobrindo a mata é uma experiência única. Já queremos voltar."</p>
+        <div class="autor">Mariana e Felipe · São Paulo, SP</div>
+        <div class="fonte">Avaliação no Google</div>
+      </div>
+      <div class="depo-card">
+        <div class="stars">★★★★★</div>
+        <p>"Atendimento acolhedor do início ao fim e um café da manhã incrível. A pousada fica em um ponto alto e isolado, perfeito para descansar de verdade."</p>
+        <div class="autor">Ana Carolina · Campinas, SP</div>
+        <div class="fonte">Avaliação no Booking.com</div>
+      </div>
+      <div class="depo-card">
+        <div class="stars">★★★★★</div>
+        <p>"Lugar perfeito para casais. Silêncio, natureza, esquilos no jardim e todo o conforto dentro do chalé. A melhor hospedagem que já tivemos em Monte Verde."</p>
+        <div class="autor">Juliana e Rodrigo · Belo Horizonte, MG</div>
+        <div class="fonte">Avaliação no Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 5 — DESCUBRA MONTE VERDE ===== -->
+<section class="destino">
+  <div class="container destino-grid">
+    <img src="eb/monteverde-web.jpg" alt="Monte Verde — Serra da Mantiqueira" loading="lazy">
+    <div>
+      <h2>Monte Verde: a 190 km de SP, a quilômetros de distância do estresse.</h2>
+      <p>Monte Verde fica a apenas 190 km de São Paulo — menos de 3 horas e você já está respirando ar puro na Serra da Mantiqueira.</p>
+      <p>Trilhas, cachoeiras, gastronomia de montanha e o ar mais frio do sul de Minas. Monte Verde é o destino perfeito para desligar — e a Alto de Monte Verde é onde você vai querer ficar.</p>
+      <a href="#formulario" class="btn btn-verde">Quero conhecer Monte Verde</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 6 — CTA FINAL ===== -->
+<section class="cta-final">
+  <div class="container">
+    <h2>O desconto não dura para sempre — e as datas de inverno também não.</h2>
+    <p class="sub">Preencha o formulário acima, receba seu cupom RESERVE15 por e-mail e use na hora de reservar. Válido para estadias entre agosto e novembro de 2026, com mínimo de 2 diárias. Simples assim.</p>
+    <p class="urgencia">Oferta válida até 30 de setembro de 2026 ou enquanto houver vagas disponíveis.</p>
+    <div class="selos">
+      <span><span class="star">★</span> 9,7 no Booking.com</span>
+      <span><span class="star">★</span> 4,7 no Google</span>
+      <span>TripAdvisor Travellers' Choice</span>
+      <span>+500 avaliações</span>
+    </div>
+    <div class="countdown" data-countdown>
+      <div class="unit"><div class="num" data-d>--</div><div class="lbl">dias</div></div>
+      <div class="unit"><div class="num" data-h>--</div><div class="lbl">horas</div></div>
+      <div class="unit"><div class="num" data-m>--</div><div class="lbl">min</div></div>
+    </div>
+    <a href="#formulario" class="btn btn-caramelo">Garantir meu desconto agora</a>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 7 — FAQ ===== -->
+<section class="faq">
+  <div class="container">
+    <h2>Perguntas frequentes</h2>
+    <details>
+      <summary>Quais são os horários de check-in e check-out?</summary>
+      <p>Check-in: das 14h às 22h. Check-out: das 9h às 12h.</p>
+    </details>
+    <details>
+      <summary>O que está incluso na diária?</summary>
+      <p>Café da manhã artesanal servido todos os dias. Arrumação diária do chalé. Wi-Fi gratuito. Estacionamento gratuito.</p>
+    </details>
+    <details>
+      <summary>Qual a validade do cupom?</summary>
+      <p>O cupom é válido para reservas realizadas em agosto e setembro de 2026, para estadias entre agosto e novembro de 2026.</p>
+    </details>
+    <details>
+      <summary>Como usar o cupom?</summary>
+      <p>Após preencher o formulário, você recebe o cupom por e-mail. Acesse o motor de reservas pelo link recebido — o cupom já estará pré-aplicado.</p>
+    </details>
+    <details>
+      <summary>Há mínimo de diárias?</summary>
+      <p>Sim. A oferta é válida para reservas com mínimo de 2 diárias.</p>
+    </details>
+    <details>
+      <summary>Posso cancelar minha reserva?</summary>
+      <p>Cancelamento sem custos até 7 (sete) dias antes da data do check-in. Cancelamento fora do prazo acima mencionado implica em cobrança de 100% do total da estadia. No caso de não comparecimento ou saída antecipada, iremos cobrar 100% do pacote fechado. Em períodos de feriados prolongados ou alta temporada (15 de junho a 15 de agosto), o cancelamento ou alteração só serão aceitos com até 14 dias antes da chegada. Após este prazo, iremos cobrar 100%. Em caso de check-out (saída) antecipado, antes do tempo combinado na reserva, não será realizado qualquer reembolso ou estorno de valores recebidos, devendo os pacotes ser pagos em sua totalidade.</p>
+    </details>
+  </div>
+</section>
+
+<a href="https://wa.me/553534381333?text=Ol%C3%A1!%20Quero%20tirar%20d%C3%BAvidas%20sobre%20o%20Early%20Booking%202026." class="wa-float" target="_blank" rel="noopener" aria-label="Tire suas dúvidas pelo WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.44 9.44 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.42 9.42 0 0 1-1.44-5.02c0-5.2 4.24-9.44 9.46-9.44a9.4 9.4 0 0 1 6.68 2.77 9.36 9.36 0 0 1 2.77 6.68c0 5.2-4.24 9.45-9.47 9.45zM20.2 3.8A11.3 11.3 0 0 0 12.05.5C5.8.5.73 5.57.73 11.8c0 2.08.54 4.1 1.58 5.9L.63 23.5l5.95-1.56a11.3 11.3 0 0 0 5.46 1.39h.01c6.24 0 11.32-5.07 11.32-11.3 0-3.02-1.18-5.86-3.17-8z"/></svg>
+  <span>Tire suas dúvidas pelo WhatsApp</span>
+</a>
+
+<footer>
+  <div class="container">
+    <p><strong>Pousada Alto de Monte Verde</strong> — Seu ponto alto, entre a neblina.</p>
+    <p>Monte Verde, MG · Serra da Mantiqueira · 1.750m de altitude</p>
+  </div>
+</footer>
+
+<script>
+// Contador regressivo — encerra em 30/09/2026 23:59 (fim do período de reservas)
+(function(){
+  var deadline = new Date('2026-09-30T23:59:59-03:00').getTime();
+  var blocks = document.querySelectorAll('[data-countdown]');
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var diff = deadline - Date.now();
+    if(diff < 0) diff = 0;
+    var d = Math.floor(diff/864e5),
+        h = Math.floor(diff%864e5/36e5),
+        m = Math.floor(diff%36e5/6e4);
+    blocks.forEach(function(b){
+      b.querySelector('[data-d]').textContent = pad(d);
+      b.querySelector('[data-h]').textContent = pad(h);
+      b.querySelector('[data-m]').textContent = pad(m);
+    });
+  }
+  tick();
+  setInterval(tick, 30000);
+})();
+</script>
+
+</body>
+</html>
